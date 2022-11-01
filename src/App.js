@@ -1,14 +1,17 @@
 
-// import './App.css';
-import Form from './components/form/Form';
-
+import Header from './components/header/Header';
+import {Route,Routes} from 'react-router-dom'
+import Table from './components/table/Table';
+import FormPage from './components/form/FormPage';
 function App() {
   return (
-    // <div className="App">
-    //   <header className="App-header">
-        <Form/>
-    //   </header>
-    // </div>
+    <>
+    <Header/>
+        <Routes>
+          <Route path='/' element={<Table/>}/>
+          <Route path='/newStudent' element={<FormPage/>}/>
+        </Routes>
+    </>
   );
 }
 
